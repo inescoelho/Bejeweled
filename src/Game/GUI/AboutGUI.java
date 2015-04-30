@@ -88,6 +88,7 @@ public class AboutGUI extends JPanel {
 		jLabel1.setForeground(new Color(255, 216, 0));
 		jLabel1.setBounds(0, 200, 800, 16);
 		this.add(jLabel1);
+		jLabel1 = new JLabel("André Estévão (2011157298)", SwingConstants.CENTER);
 		jLabel1.setForeground(new Color(255, 216, 0));
 		jLabel1.setBounds(0, 230, 800, 16);
 		this.add(jLabel1);
