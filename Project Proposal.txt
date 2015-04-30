@@ -1,0 +1,23 @@
+INTRODUCTION
+The purpose of this practical work is to implement a game similar to the famous game "Bejeweled ". In this game, the player must move pieces in orthogonal grid, exchanging the position of two pieces, in order to create in-line sets of three or more pieces of the same kind. When selecting two neighbouring pieces, their positions get swapped and if this change forms an horizontal and/or vertical combination of three or more pieces of the same kind, these pieces will be removed from the board and the corresponding points are added to the player's score.
+
+THE GAME
+The game implemented on this project must have the following characteristic:
+
+- Game Board: The game board should be a square grid of 8x8 dimensions. However, it should be provided the possibility to change these dimensions. When the game starts, the board must be filled randomly with different types of pieces, ensuring that on this initial configuration there are sets of three or more equal parts. It should also be possible to start the board with a predefined configuration that should allow testing of different options for creating sets.
+ 
+- Pieces: It must be implemented six different types of pieces. You can use any characteristic to differentiate them (e.g. colour, shape, or both). When the player makes a move (swap game pieces), the program will calculate if this move is valid (the move allows the formation of a set of three or more identical pieces in a horizontal or vertical row). If the move is not valid, the program should reject it, keeping the earlier configuration. Otherwise, it must detect all sets of pieced formed, remove those remove and add the corresponding points to the overall score. The score of each set must take in consideration the set size. Then, the areas that become free should be filled with pieces from higher rows (law of gravity), and new pieces must be generated randomly to fill the gaps on top of the columns.
+
+ - Game Types: It should be implemented two variants of the game: 
+	(1) The first type does not have time control, the game ends when there are no more possible movements that generate valid sets. The game must have ten levels and the passing of a level must be determined by the score achieved. The score obtained by forming a valid set must increase according to the game level. 
+	(2) In the second type of game, should be considered a time limit for each level. Once more, must be implemented ten levels for the game , and the time available to complete the level must decrease as the levels goes by, while the score obtained by forming each set type increases. The total score determines the passing of a level. In this type of game, if there are no more possible moves, it must be generated a new random board, continuing the game.
+	
+- Power-ups: Certain situations in the game should create pieces with special powers. When these pieces are destroyed, their special power must be activated. These power-up pieces must be visually identifiable. The score obtained when a power-up is triggered must increase according with the number of pieces destroyed. The different power-ups to be implemented are:
+	(1) When sets of four pieces are created, it should be created a power-up piece of the same type (color / shape) with the power to destroy an entire line of parts.
+	(2) When sets of five pieces are created, it should be created a power-up piece of the same type (color / shape) with the power to destroy all the pieces of the same type on the board.
+	(3) When two orthogonal sets of the same type are created, it should be generated a power-up piece with the power to destroy an entire row and column.
+
+- Highscores: The program must store information on the higher scores of both game types. When a new high score is achieved the program must ask the user the name to record. Moreover, the program must permit access to the highscore list.
+
+IMPLEMENTATION
+The program should be implemented using Java language. As this project is based on a game, it should be given special attention to the interaction with the user. For this, you can use Java Swing, or other graphical library directed to game programming (e.g. LWGL or Slick).
